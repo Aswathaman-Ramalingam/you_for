@@ -7,7 +7,6 @@ export const metadata = {
 
 export default function Login() {
   return (
-<<<<<<< HEAD
     <main className=' h-screen bg-[#D9D9D9] w-full'>
       <div className=' flex flex-row h-full w-full'>
         HI
