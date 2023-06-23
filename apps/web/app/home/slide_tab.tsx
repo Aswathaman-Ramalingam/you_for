@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react';
 
 interface SlideItem {
@@ -6,7 +7,7 @@ interface SlideItem {
   link: string;
 }
 
-const VerticalSlideBar: React.FC = () => {
+export default function VerticalSlideBar(){
   const [isOpen, setIsOpen] = useState(false);
   const [activeSlideItem, setActiveSlideItem] = useState(0);
 
@@ -17,14 +18,10 @@ const VerticalSlideBar: React.FC = () => {
     { id: 3, label: 'Contact', link: '/contact' },
   ];
 
- 
-
- 
-
   return (
-    <div className="fixed left-1 top-0 bottom-0 flex">
+    <div className="fixed -left-16 top-16 bottom-0 flex h-screen w-1/2">
       <div
-        className={`w-16 bg-gray-900 text-white overflow-hidden transition-transform duration-300 ${
+        className={`w-16 bg-gray-800 text-white overflow-hidden transition-transform duration-300 ${
           isOpen ? 'transform translate-x-0' : 'transform -translate-x-full'
         }`}
       >
@@ -55,7 +52,7 @@ const VerticalSlideBar: React.FC = () => {
               <li
                 key={slideItem.id}
                 className={`${
-                   slideItem.id ? 'bg-blue-500 text-white' : 'text-gray-300'
+                  slideItem.id ? 'bg-blue-500 text-white' : 'text-gray-300'
                 } py-2 px-4 hover:bg-blue-500 cursor-pointer`}
                 onClick={() => slideItem.id}
               >
@@ -69,4 +66,3 @@ const VerticalSlideBar: React.FC = () => {
   );
 };
 
-export default VerticalSlideBar;

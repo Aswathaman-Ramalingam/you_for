@@ -1,13 +1,14 @@
-"use client"
 import React from 'react';
 import VerticalSlideBar from './slide_tab';
 import Navigation from './nav_bar';
 
 const MyPage: React.FC = () => {
   return (
-      
-   <Navigation/>
-    
+    <section>
+      <Navigation/>
+      <VerticalSlideBar />
+
+    </section>    
   );
 };
 
