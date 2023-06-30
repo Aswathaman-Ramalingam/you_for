@@ -12,10 +12,10 @@ export default function VerticalSlideBar(){
   const [activeSlideItem, setActiveSlideItem] = useState(0);
 
   const slideItems: SlideItem[] = [
-    { id: 0, label: 'Home', link: '/' },
-    { id: 1, label: 'About', link: '/about' },
-    { id: 2, label: 'Services', link: '/services' },
-    { id: 3, label: 'Contact', link: '/contact' },
+    { id: 0, label: 'Home', link: '#' },
+    { id: 1, label: 'About', link: '#' },
+    { id: 2, label: 'Services', link: '#' },
+    { id: 3, label: 'Contact', link: '#' },
   ];
 
   return (
@@ -31,7 +31,7 @@ export default function VerticalSlideBar(){
         >
           {isOpen ? (
             <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
-              <path d="M6 19L18 12L6 5V19Z" fill="white" />
+              <path d="M6 19L18 12L6 5V19Z" fill="black" />
             </svg>
           ) : (
             <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
@@ -39,7 +39,7 @@ export default function VerticalSlideBar(){
                 fillRule="evenodd"
                 clipRule="evenodd"
                 d="M4 6H20V5H4V6ZM4 12H20V11H4V12ZM4 18H20V17H4V18Z"
-                fill="white"
+                fill="black"
               />
             </svg>
           )}
